@@ -1,0 +1,20 @@
+{
+    "name": "Our chrome extension",
+    "version" : "0.1",
+    "description": "A chrome extension made for the people of Youtube!",
+    "manifest_version": 2,
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "run_at" : "document_start",
+            "matches" : ["<all_urls>"],
+            "js": ["our.js"]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "browser_style": true
+    }
+}
